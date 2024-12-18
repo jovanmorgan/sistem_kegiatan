@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.7" rel="stylesheet" />
+</head>
+
+<body class="">
+  <main class="main-content mt-0">
+    <section>
+      <div class="page-header min-vh-75">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
+              <div class="card card-plain mt-8">
+                <div class="card-header pb-0 text-left bg-transparent">
+                  <h2 class="font-weight-bolder text-info text-gradient">Silakan Login</h2>
+                  <p class="mb-0">Masukan Data Yang Sesuai</p>
+                </div>
+                <div class="card-body">
+                  <form role="form">
+                    <label>Username</label>
+                    <div class="box-login">
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" placeholder="Email">
+                    </div>
+                    <label>Password</label>
+                    <div class="box-login">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn-login">Login</button>
+                  </form>
+                  <div class="bottom">
+                    <a href="">Register</a>
+                    <a href="">Forget Password</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
+
+
+
+<!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+<!--   Core JS Files   -->
+<script src="../assets/js/core/popper.min.js"></script>
+<script src="../assets/js/core/bootstrap.min.js"></script>
+<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script>
+  // input password 
+  function togglePasswordVisibility(inputId) {
+    var passwordInput = document.getElementById(inputId);
+    var passwordIcon = document.querySelector(
+      "#" + inputId + " + .show-password"
+    );
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      passwordIcon.classList.remove("fa-eye-slash");
+      passwordIcon.classList.add("fa-eye");
+    } else {
+      passwordInput.type = "password";
+      passwordIcon.classList.remove("fa-eye");
+      passwordIcon.classList.add("fa-eye-slash");
+    }
+  }
+
+  var win = navigator.platform.indexOf('Win') > -1;
+  if (win && document.querySelector('#sidenav-scrollbar')) {
+    var options = {
+      damping: '0.5'
+    }
+    Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+  }
+</script>
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+</body>
+
+</html>
